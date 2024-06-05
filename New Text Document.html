@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>OSURUK</h1>
+    <audio id="fartSound" src="fart.mp3"></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('fartSound');
+            audio.play();
+        });
+    </script>
+</body>
+</html>
