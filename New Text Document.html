@@ -16,16 +16,21 @@
         h1 {
             font-size: 5em;
             font-weight: bold;
+            color: #000;
         }
     </style>
 </head>
 <body>
     <h1>OSURUK</h1>
-    <audio id="fartSound" src="fart.mp3"></audio>
+    <audio id="fartSound" src="fart.mp3" type="audio/mpeg"></audio>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('fartSound');
-            audio.play();
+            audio.play().catch(error => {
+                console.log('Autoplay was prevented:', error);
+                alert('Click OK to hear the sound!');
+                audio.play();
+            });
         });
     </script>
 </body>
